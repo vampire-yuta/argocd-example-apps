@@ -20,6 +20,7 @@ spec:
       labels:
         app: {{ template "helm-guestbook.name" . }}
         release: {{ .Release.Name }}
+        test: {{ .Values.custom_label }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
